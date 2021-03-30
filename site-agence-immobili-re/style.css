@@ -3,9 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 body{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size:1.2rem;
     margin:0;
+    padding:0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
     background-color:rgba(205, 223, 216, 0.4);
     
 
@@ -28,20 +31,19 @@ body{
     width:100%;
     font-size:1.2rem;
     color:black;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    background-color:rgba(34, 33, 33, 0.4);
     display: flex;
     justify-content: space-between;
     top:0;
     position: fixed;
     margin-bottom: 0px;
     z-index:10;
+    transition:1s;
 
 }
 
-
+/*
 nav a{
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
     font-weight: bold;
     color:black;
     display:inline;
@@ -50,12 +52,73 @@ nav a{
 
 }
 nav a:hover{
+    border-bottom: 3px solid rgb(93, 151, 116);
+    transition: all 0.5s;
+    color:rgb(93, 151, 116);
+    
+}
+*/
+
+
+  nav>.nav-links>a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+    position: relative;
+    font-weight: bold;
+}
+
+nav>.nav-links>a::after {
+    content: "";
+    height: 3px;
+    width: 0%;
+    background-color:rgb(38, 155, 129);
+    position: absolute;
+    bottom: 5px;
+    transition: 0.5s;
+    left:0;
+}
+nav>.nav-links>a.active::after {
+    content: "";
+    height: 3px;
+    width: 100%;
+    background-color: rgb(38, 155, 129);
+    position: absolute;
+    bottom: 5px;
+    transition: 1s;
+    left:0;
+}
+
+nav>.nav-links>a:hover::after {
+    width: 100%;
+    transition:1s;
+}
+  
+
+/*
+nav a:hover{
     font-weight: bolder;
     border-bottom:2px solid rgb(38, 155, 129);
     text-shadow: 1px solid rgb(27, 26, 26);
     color: rgb(38, 155, 129);
 
 }
+/*
+nav>a::after{
+    content:"";
+    height:3px;
+    width:0;
+    background-color: rgb(38, 155, 129);
+    position:absolute;
+    bottom: 5px;
+    transition:0.3s;
+    left:0;
+}
+nav>a:hover::after{
+    width:100%;
+}
+----------*/
 
 a{
     text-decoration: none;
@@ -74,9 +137,9 @@ a{
    
  /*........ style banière..........*/   
 .banner{
-margin-top: -3em;
-height: 30em;
-background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('image/francesca-tosolini-D7a8yW1MxQM-unsplash.jpg'); 
+margin-top:-3em;
+height: 36em;
+background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('image/home.jpg'); 
 background-repeat: no-repeat;
 background-size: cover;
 background-attachment: fixed;
@@ -95,8 +158,8 @@ background-position: center;
     font-size: 4rem;
     font-style: italic;
     margin: 4rem;
-    text-shadow:1px 2px;
-    color:white;
+
+    color:rgb(194, 223, 208);
 }
 
 
@@ -106,6 +169,10 @@ input,select{
     background-color:rgba(247, 246, 235, 0.8);
   
     border:none;
+}
+textarea{
+    background-color:rgba(247, 246, 235, 0.8);
+ 
 }
 input[type=button]{
     background-color: rgb(93, 151, 116);
@@ -187,7 +254,7 @@ main{
 
     margin: 4rem 0rem;
     height: 20rem;
-    background-image: url(image/fran-hogan-zhs_y6CLWco-unsplash.jpg);
+    background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url(image/fran-hogan-zhs_y6CLWco-unsplash.jpg);
     background-attachment: fixed;
     background-position: center;
     background-position: cover;
@@ -201,6 +268,9 @@ main{
     margin-top:2rem;
 }
 
+.annonce1 h1{
+    color:rgb(224, 228, 226);
+}
 /*....tetiimonials....*/
 .clients{
     margin:1rem 3rem;
@@ -271,13 +341,14 @@ main{
 }
 
 .contenu{
-    margin:3rem 0rem ;
-    padding:1rem;
+    margin:8rem 0rem ;
+    padding:2rem 0rem;
     background-color: rgb(32, 34, 34);
   
 }
 .contenu .subtitle{
     color:white;
+    margin-bottom: 8rem;
 }
 .cardadv{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -291,7 +362,7 @@ main{
 
   }
   .cardadv:hover{
-      transform: translateY(-10px);
+      transform: translateY(-10px)!important;
   }
 
 
@@ -396,9 +467,12 @@ footer i{
         
 
       }
+    
       .card2:hover {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         transform: scale(1.02);
+        transform: rotate(-2deg);
+      
 
         filter: brightness(60%);
       }
@@ -433,5 +507,39 @@ footer i{
       }
      
       
-      
+      .photo img{
+          width:400px;
+      }
      
+
+
+
+      /* Animation */
+.anim-typewriter{
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+               blinkTextCursor 500ms steps(44) infinite normal;
+  }
+  @keyframes typewriter{
+    from{width: 0;}
+    to{width: 24em;}
+  }
+  @keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+  }
+  
+  .line-1{
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%); 
+    font-size:2.5rem;  
+    font-weight:bold;
+    font-style: italic; 
+}

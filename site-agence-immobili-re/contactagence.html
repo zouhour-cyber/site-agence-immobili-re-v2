@@ -14,15 +14,17 @@
 <body>
     
   <div class="containercontact">
-  <div class="navbar">
-    <a href="home.html" id="logo"> Real estate</a>
-    <nav>
-    <a href="home.html"> Home</a>
-    <a href="rent.html"> Rent</a>
-    <a href="contact.html"> Contact us</a>
-    </nav>
-    </div>
-
+    <div class="navbar">
+      <a href="home.html" id="logo"> Real estate</a>
+      <nav>
+          <div class="nav-links">
+      <a href="home.html" > Home</a>
+      <a href="rent.html"> Rent</a>
+      <a href="contactagence.html"class="active"> Contact us</a>
+      </div>
+      </nav>
+      </div>
+      
  <div class="contactbg">
 <h2 class="subtitle"> Contact us </h2>   
  <!-------------Formulaire de contact------------>    
@@ -79,5 +81,33 @@
     </div>
         </div>
     </footer>
+
+
+    <script type="text/javascript">
+
+      window.onscroll=function(){
+          if (document.documentElement.scrollTop > 300) {
+              document.querySelector(".navbar").style.background="black";
+              document.querySelector(".navbar").style.padding="9px 100px";
+  
+              document.getElementById("a").style.color="white";
+      
+          }
+          else {
+          document.querySelector(".navbar").style.background="transparent";
+          document.querySelector(".navbar").style.padding="20px 100px";
+          document.getElementsById("a").style.color="black";
+      
+      
+      }
+      
+      }
+      
+      </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js%22%3E"> </script>
+      <script>
+        AOS.init();
+      </script>
+
 </body>
 </html>

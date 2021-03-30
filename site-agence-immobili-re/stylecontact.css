@@ -4,7 +4,6 @@
 .contactbg{
     background-image: url(image/immobilier.jpg);
     padding: 0.5rem;
-    
 
 }
 .contactbg .subtitle{
@@ -39,7 +38,7 @@ padding-left: 3rem;
     display: flex;
     justify-content: center;
 }
-.formulaire form input, .formulaire form textarea{
+.formulaire form input, textarea{
     border-radius: 0.8rem;
     width:100%;
     color: black;
