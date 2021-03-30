@@ -41,23 +41,7 @@ body{
 
 }
 
-/*
-nav a{
-    padding: 0.5rem;
-    font-weight: bold;
-    color:black;
-    display:inline;
-    
-   
 
-}
-nav a:hover{
-    border-bottom: 3px solid rgb(93, 151, 116);
-    transition: all 0.5s;
-    color:rgb(93, 151, 116);
-    
-}
-*/
 
 
   nav>.nav-links>a {
@@ -96,30 +80,6 @@ nav>.nav-links>a:hover::after {
 }
   
 
-/*
-nav a:hover{
-    font-weight: bolder;
-    border-bottom:2px solid rgb(38, 155, 129);
-    text-shadow: 1px solid rgb(27, 26, 26);
-    color: rgb(38, 155, 129);
-
-}
-/*
-nav>a::after{
-    content:"";
-    height:3px;
-    width:0;
-    background-color: rgb(38, 155, 129);
-    position:absolute;
-    bottom: 5px;
-    transition:0.3s;
-    left:0;
-}
-nav>a:hover::after{
-    width:100%;
-}
-----------*/
-
 a{
     text-decoration: none;
 }
@@ -138,8 +98,8 @@ a{
  /*........ style banière..........*/   
 .banner{
 margin-top:-3em;
-height: 36em;
-background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('image/home.jpg'); 
+height: 40em;
+background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('image/home.jpg'); 
 background-repeat: no-repeat;
 background-size: cover;
 background-attachment: fixed;
@@ -253,7 +213,7 @@ main{
 .annonce{
 
     margin: 4rem 0rem;
-    height: 20rem;
+    height: 23rem;
     background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url(image/fran-hogan-zhs_y6CLWco-unsplash.jpg);
     background-attachment: fixed;
     background-position: center;
@@ -270,6 +230,7 @@ main{
 
 .annonce1 h1{
     color:rgb(224, 228, 226);
+    
 }
 /*....tetiimonials....*/
 .clients{
@@ -369,25 +330,39 @@ main{
 
 /*.....footer...*/
   footer{
-    color:black;
+    color:whitesmoke;
     padding-left:10rem;
-    margin-top:10rem;
-    padding:3rem;
-    font-size: 1.2rem;
+    margin-top:15rem;
+    padding:4rem;
+    font-size: 1.1rem;
     list-style-type: none;
-    background: rgb(85,110,97);
-    background: linear-gradient(0deg, rgba(85,110,97,1) 4%, rgba(244,242,236,1) 90%);
+    background: rgb(20,29,26);
+    background: linear-gradient(122deg, rgba(20,29,26,1) 11%, rgba(189,246,220,1) 100%);
 }
+footer li{
 
+    color: black;
+}
 footer a{
     color:rgb(0, 0, 0);
    
+}
+footer h4{
+    margin-bottom: 0.5rem;
+}
+footer .description :nth-child(2){
+    margin-top:1rem;
 }
 footer a:hover{
   font-weight: bolder;
   border-bottom:2px solid rgb(27, 26, 26);
   text-shadow: 1px solid rgb(27, 26, 26);
+  
 
+}
+footer ::placeholder{
+    color:rgb(63, 82, 83);
+    font-size: 1rem;
 }
 footer .newsletter input[type="e-mail"]{
     margin-top: 2rem;
@@ -539,7 +514,7 @@ footer i{
     white-space: nowrap;
     overflow: hidden;
     transform: translateY(-50%); 
-    font-size:2.5rem;  
+    font-size:2.8rem;  
     font-weight:bold;
     font-style: italic; 
 }
